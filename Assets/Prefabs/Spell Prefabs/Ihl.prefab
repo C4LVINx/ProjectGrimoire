@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 4907407252985990495}
   - component: {fileID: 4907407252985990492}
   - component: {fileID: 4907407252985990496}
+  - component: {fileID: 1566937367256631099}
   m_Layer: 6
-  m_Name: Rune
+  m_Name: Ihl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,3 +138,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1566937367256631099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4907407252985990493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 313aa99c4fe01f240ac3cb12398d77e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RuneSprite: {fileID: 0}
+  WhatSpell: 01000000
+  WhatRelic: 01000000
+  WhatSlot: 01000000
