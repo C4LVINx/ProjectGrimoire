@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RelicScript : MonoBehaviour
+public class RelicRuneAttacher : MonoBehaviour
 {
     [SerializeField] public GameObject currentRune;
     [SerializeField] public GameObject currentRelic;
@@ -30,8 +30,6 @@ public class RelicScript : MonoBehaviour
         AttachedRuneFollows();
         DetectRune();
         ArtDissapersWhenHeld();
-        //DetectOtherRelic();
-        AttachedOtherRelicFollow();
     }
     private void DetectRune()
     {
@@ -70,45 +68,7 @@ public class RelicScript : MonoBehaviour
             }
         }
     }
-    private void DetectOtherRelic()
-    {
-        if (currentRelic == null)
-        {
-            if (Physics2D.OverlapBox(attachedRelicPos.position, new Vector2(scale, scale), 0, RelicMask))
-            {
-                detectedRelic = Physics2D.OverlapBox(transform.position, new Vector2(scale, scale), 0, RelicMask);
-                if (!detectedRelic.gameObject.GetComponent<DraggableObject>().isHeld && !draggable.isHeld && currentRelic != gameObject)
-                {
-                    currentRelic = detectedRelic.gameObject;
-                }
-            }
-            else
-            {
-                detectedRelic = null;
-            }
-        }
-    }
-    private void AttachedOtherRelicFollow()
-    {
-        if (currentRelic == gameObject)
-        {
-            currentRelic = null;
-        }
-        if (currentRelic != null)
-        {
-            if (draggable.isHeld)
-            {
 
-                currentRelic.transform.position = attachedRelicPos.position;
-            }
-            /*
-            if (currentRelic.GetComponent<Draggable>().isHeld == true)
-            {
-                currentRelic = null;
-            }
-            */
-        }
-    }
 
     private void OnDrawGizmos()
     {
