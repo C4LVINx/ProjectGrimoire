@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class RelicRelicAttacher : MonoBehaviour
 {
@@ -13,10 +14,11 @@ public class RelicRelicAttacher : MonoBehaviour
 
     [SerializeField] private Transform attachedRelicPos;
     private Collider2D detectedRelic;
-    private void start()
+    private void Start()
     {
         draggable = GetComponent<DraggableObject>();
     }
+
 
     private void Update()
     {
@@ -36,7 +38,15 @@ public class RelicRelicAttacher : MonoBehaviour
             }
         }
     }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.magenta;
+        //Check that it is being run in Play Mode, so it doesn't try to draw this in Editor mode
 
-    
-    
+        //Draw a cube where the OverlapBox is (positioned where your GameObject is as well as a size)
+        Gizmos.DrawWireCube(attachedRelicPos.position, new Vector2(overlapBoxScale, overlapBoxScale));
+        // Gizmos.DrawWireCube(attachedRelicPos.position, new Vector2(scale, scale));
+    }
+
+
 }
