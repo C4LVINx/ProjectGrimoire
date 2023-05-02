@@ -11,7 +11,7 @@ public class RelicRelicAttacher : MonoBehaviour
     [SerializeField] private float overlapBoxScale = 1f;
     [HideInInspector] public bool IsAttachable;
 
-    private GameObject currentRelic;
+    public GameObject currentRelic;
     public GameObject RelicThisAttachedTo;
     [SerializeField] private LayerMask RelicMask;
 
@@ -30,17 +30,17 @@ public class RelicRelicAttacher : MonoBehaviour
         DetectRelic();
         ChildRelic();
         RelicDetaching();
-        FixWhackBug();
+        //FixWhackBug();
     }
 
     private void DetectRelic()
     {
-        if (currentRelic == null)
+        if (currentRelic == null || RelicThisAttachedTo == null)
         {
             if (Physics2D.OverlapBox(attachedRelicPos.position + new Vector3(-0.4f, -0.6f, 0), new Vector2(overlapBoxScale, overlapBoxScale), 0, RelicMask))
             {
                 detectedRelic = Physics2D.OverlapBox(attachedRelicPos.position + new Vector3(-0.4f, -0.6f, 0), new Vector2(overlapBoxScale, overlapBoxScale), 0, RelicMask);
-                if (!detectedRelic.gameObject.GetComponent<DraggableObject>().isHeld && !draggable.isHeld && IsAttachable && detectedRelic.GetComponent<RelicRelicAttacher>().IsAttachable)
+                if (!detectedRelic.gameObject.GetComponent<DraggableObject>().isHeld && !draggable.isHeld && IsAttachable && detectedRelic.GetComponent<RelicRelicAttacher>().IsAttachable && !RelicThisAttachedTo)
                 {
                     currentRelic = detectedRelic.gameObject;
                     currentRelic.GetComponent<RelicRelicAttacher>().RelicThisAttachedTo = gameObject;

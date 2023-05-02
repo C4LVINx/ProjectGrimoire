@@ -5,7 +5,7 @@ using UnityEngine;
 public class RuneStats : MonoBehaviour
 {
     [SerializeField] private Sprite RuneSprite;
-    public int[] WhatSpell;
-    public int[] WhatRelic;
-    public int[] WhatSlot;
+    public SpellName WhatSpell;
+    public int WhatRelic;
+    public int WhatSlot;
 }

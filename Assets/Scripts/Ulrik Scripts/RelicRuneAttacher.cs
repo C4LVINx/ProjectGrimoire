@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class RelicRuneAttacher : MonoBehaviour
 {
+    [SerializeField] private GameObject thisRelic;
     [SerializeField] public GameObject currentRune;
-    [SerializeField] public GameObject currentRelic;
-    [SerializeField] public GameObject otherRelic;
 
     private DraggableObject draggable;
     [SerializeField] private LayerMask RuneMask;
-    [SerializeField] private LayerMask RelicMask;
     [SerializeField]private float scale = 2;
     private SpriteRenderer spriteRenderer;
     private Collider2D detectedRune;
@@ -21,7 +19,7 @@ public class RelicRuneAttacher : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        draggable = GetComponent<DraggableObject>();
+        draggable = thisRelic.GetComponent<DraggableObject>();
     }
 
 

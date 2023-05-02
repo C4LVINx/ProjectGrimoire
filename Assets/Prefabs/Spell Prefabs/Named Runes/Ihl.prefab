@@ -151,6 +151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RuneSprite: {fileID: 0}
-  WhatSpell: 01000000
-  WhatRelic: 01000000
-  WhatSlot: 01000000
+  WhatSpell: 0
+  WhatRelic: 1
+  WhatSlot: 1
