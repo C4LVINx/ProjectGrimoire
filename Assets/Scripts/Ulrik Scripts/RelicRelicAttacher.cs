@@ -30,6 +30,7 @@ public class RelicRelicAttacher : MonoBehaviour
         DetectRelic();
         ChildRelic();
         RelicDetaching();
+        FixWhackBug();
     }
 
     private void DetectRelic()
@@ -52,6 +53,18 @@ public class RelicRelicAttacher : MonoBehaviour
                 detectedRelic = null;
             }
         }
+    }
+
+    private void FixWhackBug()
+    {
+        if(currentRelic != null)
+        {
+            if (currentRelic.GetComponent<RelicRelicAttacher>().RelicThisAttachedTo = currentRelic)
+            {
+                currentRelic.GetComponent<RelicRelicAttacher>().RelicThisAttachedTo = gameObject;
+            }
+        }
+        
     }
 
     private void ChildRelic()
