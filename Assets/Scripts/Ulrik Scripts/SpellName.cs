@@ -1,5 +1,5 @@
 public enum SpellName
 {
-    Leviøsa,
-    ProggusMakeGamius,
+    FirstSpell,
+    FinalSpell,
 }

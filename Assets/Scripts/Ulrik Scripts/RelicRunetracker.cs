@@ -17,7 +17,7 @@ public class RelicRunetracker : MonoBehaviour
     {
         if(runeAttacher.currentRune != null)
         {
-            var runestats = runeAttacher.currentRune.GetComponent<RuneStats>();
+            var runestats = runeAttacher.currentRune.GetComponent<Rune>().stats;
             currentRuneSpell = runestats.WhatSpell;
             currentRuneRelic = runestats.WhatRelic;
             currentRuneSlot = runestats.WhatSlot;

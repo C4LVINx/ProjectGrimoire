@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4907407252985990495}
   - component: {fileID: 4907407252985990492}
   - component: {fileID: 4907407252985990496}
-  - component: {fileID: 1566937367256631099}
+  - component: {fileID: 6243445293056118745}
   m_Layer: 6
   m_Name: BlankRune
   m_TagString: Untagged
@@ -138,7 +138,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1566937367256631099
+--- !u!114 &6243445293056118745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,9 +147,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4907407252985990493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 313aa99c4fe01f240ac3cb12398d77e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 46424ae8074a57644927066156bb421e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WhatSpell: 
-  WhatRelic: 
-  WhatSlot: 
+  stats:
+    RuneSprite: {fileID: 0}
+    WhatSpell: 0
+    WhatRelic: 0
+    WhatSlot: 0

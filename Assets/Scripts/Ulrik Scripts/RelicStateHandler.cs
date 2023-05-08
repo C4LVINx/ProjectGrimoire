@@ -12,26 +12,47 @@ public class RelicStateHandler : MonoBehaviour
     [SerializeField] private RelicRelicAttacher RelicAttacher;
 
     [SerializeField] private SpellRecipeHandler recipeHandler;
-
-    private void OnMouseDown()
-    {
-        //When player clicks middle mouse button
-        if (Input.GetMouseButtonDown(2))
-        {
-         //   recipeHandler.GetCompleteRecipe(relicInventory);
-        }
-    }
+    [SerializeField] private bool hasTwoSlots;
+    
+    
 
     private void Start()
     {
         relicInventory = new RelicInventory();
+        relicInventory.hasTwoSlots = hasTwoSlots;
     }
 
     private void Update()
     {
-        relicInventory.firstSlotRune = slot1RuneAttacher.currentRune.GetComponent<RuneStats>();
-        relicInventory.secondSlotRune = slot2RuneAttacher.currentRune.GetComponent<RuneStats>();
+        if (Input.GetMouseButtonDown(2))
+        {
+            recipeHandler.GetCompleteRecipe(relicInventory);
+        }
 
-        relicInventory.relicStateHandler = RelicAttacher.currentRelic.GetComponent<RelicStateHandler>();
+        if (slot1RuneAttacher.currentRune != null)
+        {
+
+            relicInventory.firstSlotRune = slot1RuneAttacher.currentRune.GetComponent<Rune>().stats;
+        }
+        if(inventory.hasTwoSlots)
+        {
+            if(slot2RuneAttacher.currentRune != null)
+            {
+                relicInventory.secondSlotRune = slot2RuneAttacher.currentRune.GetComponent<Rune>().stats;
+            }
+        }
+        if (RelicAttacher.currentRelic == null) return;
+
+        var otherInventory = RelicAttacher.currentRelic.GetComponent<RelicStateHandler>().inventory;
+        if(otherInventory.firstSlotRune != null)
+        {
+            relicInventory.secondRelicFirstRune = otherInventory.firstSlotRune;
+        }
+        if (!otherInventory.hasTwoSlots) return;
+        if(otherInventory.secondSlotRune != null)
+        {
+            relicInventory.secondRelicSecondRune = otherInventory.secondSlotRune;
+        }
+        
     }
 }

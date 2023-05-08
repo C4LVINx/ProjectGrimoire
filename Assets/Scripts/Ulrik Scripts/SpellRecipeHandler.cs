@@ -6,12 +6,14 @@ using UnityEngine;
 public class SpellRecipeHandler : ScriptableObject
 {
     [SerializeField] private SpellrecipeScrub[] spellrecipes;
-    /*
+    
     public SpellrecipeScrub GetCompleteRecipe(RelicInventory inventory)
     {
         //Noe kult
         
-        //return spellrecipes.First(recipe => recipe.IsRecipeComplete(inventory));
+        var isRecipeComplete = spellrecipes.First(recipe => recipe.IsRecipeComplete(inventory));
+        Debug.Log(isRecipeComplete);
+        return isRecipeComplete;
     }
-    */
+    
 }

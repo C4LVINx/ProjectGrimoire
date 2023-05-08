@@ -7,14 +7,12 @@ public class SpellrecipeScrub : ScriptableObject
     [SerializeField] private RelicInventory inventory;
     [SerializeField] private string SpellDescription;
 
-    public bool IsRecipeComplete(SpellName SpellCheck, int RelicCheck, int SlotCheck)
+    public bool IsRecipeComplete(RelicInventory inventoryCheck)
     {
-        /*
-        if (SpellCheck != Spell) return false;
-        if (RelicCheck != Relic) return false;
-        if (SlotCheck != Slot) return false;
-        */
+        if(inventory.firstSlotRune != inventoryCheck.firstSlotRune) return false;
+        if(inventory.secondSlotRune != inventoryCheck.secondSlotRune) return false;
+        if(inventory.secondRelicFirstRune != inventoryCheck.secondRelicFirstRune) return false;
+        if(inventory.secondRelicSecondRune != inventoryCheck.secondRelicSecondRune) return false;
         return true;
-        
     }
 }

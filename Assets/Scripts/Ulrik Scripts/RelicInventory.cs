@@ -7,6 +7,7 @@ public struct RelicInventory
 {
     public RuneStats firstSlotRune;
     public RuneStats secondSlotRune;
-    public RelicStateHandler relicStateHandler;
+    public RuneStats secondRelicFirstRune;
+    public RuneStats secondRelicSecondRune;
     public bool hasTwoSlots;
 }

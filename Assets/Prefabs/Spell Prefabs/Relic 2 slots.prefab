@@ -641,11 +641,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07fab95b2607639498d5745c295e88ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstSlotRuneAttacher: {fileID: 5293367566969184372}
-  secondSlotRuneAttacher: {fileID: 1989300934908990463}
-  relicAttacher: {fileID: 2153184503487133829}
+  slot1RuneAttacher: {fileID: 5293367566969184372}
+  slot2RuneAttacher: {fileID: 1989300934908990463}
+  RelicAttacher: {fileID: 2153184503487133829}
+  recipeHandler: {fileID: 11400000, guid: 8210edfc48b704349bdd07679cc94661, type: 2}
   hasTwoSlots: 1
-  currentSlotOneRune: {fileID: 0}
-  currentSlotTwoRune: {fileID: 0}
-  currentAttachedRelicSlotOneRune: {fileID: 0}
-  currentAttachedRelicSlotTwoRune: {fileID: 0}
