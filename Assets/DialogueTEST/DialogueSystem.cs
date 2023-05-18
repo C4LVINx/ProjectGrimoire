@@ -5,38 +5,63 @@ using UnityEngine;
 public class DialogueSystem : MonoBehaviour
 {
     [Header("Visual Cue")]
-    [SerializeField] private GameObject visualcue;
+    [SerializeField] private GameObject visualCue;
 
-    [Header("INK")]
-    [SerializeField] private TextAsset INK;
+    [Header("Ink JSON")]
+    [SerializeField] private TextAsset inkJSON;
+
+    [SerializeField] private GameObject pressButton;
 
     private bool playerInRange;
+
+    private bool canStart;
 
     private void Awake()
     {
         playerInRange = false;
-        visualcue.SetActive(false);
+        visualCue.SetActive(false);
+        canStart = true;
+
     }
 
-    
 
-    // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
-        if (playerInRange)
+        //This is if you want to trigger by interacting inside a collider
+
+        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
-            visualcue.SetActive(true);
-            if (InputManager.GetInstance().GetInteractPressed)
+            visualCue.SetActive(true);
+            if (canStart)
             {
-                Debug.Log(INK)
+                DialogueManager.GetInstance().EnterDialogueMode(inkJSON); //nice way to get info from other scripts?
+                canStart = false;
             }
         }
         else
         {
-            visualcue.SetActive(false);  
+            visualCue.SetActive(false);
+            pressButton.SetActive(false);
+
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            playerInRange = true;
+        }
+    }
 
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            playerInRange = false;
+        }
+
+    }
 }
+
