@@ -1,5 +1,6 @@
 public enum SpellName
 {
-    FirstSpell,
-    FinalSpell,
+    Fire,
+    AntiForceField,
+    Piss,
 }

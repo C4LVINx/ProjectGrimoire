@@ -6,6 +6,7 @@ public class SpellrecipeScrub : ScriptableObject
 {
     [SerializeField] private RelicInventory inventory;
     [SerializeField] private string SpellDescription;
+    public SpellName SpellName;
 
     public bool IsRecipeComplete(RelicInventory inventoryCheck)
     {

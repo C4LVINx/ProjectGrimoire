@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: Recipe Handler
   m_EditorClassIdentifier: 
   spellrecipes:
-  - {fileID: 11400000, guid: 42108b7f36d352641a3570c527cb816f, type: 2}
-  - {fileID: 11400000, guid: 004b56cc0053566459cb1c177d950c9f, type: 2}
-  - {fileID: 11400000, guid: cfa13b86fedd4524ead2f779ceee993a, type: 2}
-  - {fileID: 11400000, guid: 6fc79cb94b25704408c711db1800d2df, type: 2}
+  - {fileID: 11400000, guid: 9e1eb588795c05849918a87ce5a50344, type: 2}
+  - {fileID: 11400000, guid: c388d0f08e237a24f9d7092f1fc2e0c2, type: 2}

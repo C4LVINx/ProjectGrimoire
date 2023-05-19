@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public delegate void SpellCast(SpellName spellName);
+
 public class RelicStateHandler : MonoBehaviour
 {
     private RelicInventory relicInventory;
@@ -13,8 +15,8 @@ public class RelicStateHandler : MonoBehaviour
 
     [SerializeField] private SpellRecipeHandler recipeHandler;
     [SerializeField] private bool hasTwoSlots;
-    
-    
+
+    public static event SpellCast onSpellCast;
 
     private void Start()
     {
@@ -26,7 +28,12 @@ public class RelicStateHandler : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(2))
         {
-            recipeHandler.GetCompleteRecipe(relicInventory);
+            
+            var recipe = recipeHandler.GetCompleteRecipe(relicInventory);
+            if(recipe != null)
+            {
+                onSpellCast?.Invoke(recipe.SpellName);
+            }
         }
 
         if (slot1RuneAttacher.currentRune != null)
