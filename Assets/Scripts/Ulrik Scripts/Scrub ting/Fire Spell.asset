@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c829fb376bf36b740acb65d1b3c52400, type: 3}
+  m_Name: Fire Spell
+  m_EditorClassIdentifier: 
+  inventory:
+    firstSlotRune:
+      RuneSprite: {fileID: 0}
+      WhatSpell: 0
+      WhatRelic: 1
+      WhatSlot: 1
+    secondSlotRune:
+      RuneSprite: {fileID: 0}
+      WhatSpell: 0
+      WhatRelic: 0
+      WhatSlot: 0
+    secondRelicFirstRune:
+      RuneSprite: {fileID: 0}
+      WhatSpell: 0
+      WhatRelic: 0
+      WhatSlot: 0
+    secondRelicSecondRune:
+      RuneSprite: {fileID: 0}
+      WhatSpell: 0
+      WhatRelic: 0
+      WhatSlot: 0
+    hasTwoSlots: 0
+  SpellDescription: 
+  SpellName: 0
