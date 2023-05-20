@@ -54,14 +54,14 @@ public class RuneRelicButton : MonoBehaviour
     {
         if(relic1)
         {
-            Instantiate(ObjectRelic1, new Vector3(-6, 0, 0), Quaternion.identity);
+            Instantiate(ObjectRelic1, new Vector3(-2.5f, -1, 0), Quaternion.identity);
         }
     }
     public void Relic2Button()
     {
         if (relic2)
         {
-            Instantiate(ObjectRelic2, new Vector3(-6, 0, 0), Quaternion.identity);
+            Instantiate(ObjectRelic2, new Vector3(-2.5f, -1, 0), Quaternion.identity);
         }
     }
 
@@ -69,7 +69,7 @@ public class RuneRelicButton : MonoBehaviour
     {
        if(ihl)
         {
-            Instantiate(ObjectIhl, new Vector3(-6, 0, 0), Quaternion.identity);
+            Instantiate(ObjectIhl, new Vector3(-2.5f, -1, 0), Quaternion.identity);
         }
     }
 
@@ -77,7 +77,7 @@ public class RuneRelicButton : MonoBehaviour
     {
         if (taros)
         {
-            Instantiate(ObjectTaros, new Vector3(-6, 0, 0), Quaternion.identity);
+            Instantiate(ObjectTaros, new Vector3(-2.5f, -1, 0), Quaternion.identity);
         }
     }
 
@@ -85,7 +85,7 @@ public class RuneRelicButton : MonoBehaviour
     {
         if (yohn)
         {
-            Instantiate(ObjectYohn, new Vector3(-6, 0, 0), Quaternion.identity);
+            Instantiate(ObjectYohn, new Vector3(-2.5f, -1, 0), Quaternion.identity);
         }
     }
 
@@ -93,7 +93,7 @@ public class RuneRelicButton : MonoBehaviour
     {
         if (ahk)
         {
-            Instantiate(ObjectAhk, new Vector3(-6, 0, 0), Quaternion.identity);
+            Instantiate(ObjectAhk, new Vector3(-2.5f, -1, 0), Quaternion.identity);
         }
     }
 }
