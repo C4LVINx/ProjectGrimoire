@@ -9,7 +9,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4907407252985990493, guid: 13a125f11905d84479ae7023d5519345, type: 3}
       propertyPath: m_Name
-      value: Ihl
+      value: Ihl Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907407252985990494, guid: 13a125f11905d84479ae7023d5519345, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c757ea35851d0b546a33109779bb8080, type: 3}
+    - target: {fileID: 4907407252985990494, guid: 13a125f11905d84479ae7023d5519345, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907407252985990494, guid: 13a125f11905d84479ae7023d5519345, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907407252985990494, guid: 13a125f11905d84479ae7023d5519345, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4907407252985990497, guid: 13a125f11905d84479ae7023d5519345, type: 3}
       propertyPath: m_RootOrder
