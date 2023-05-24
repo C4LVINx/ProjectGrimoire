@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whatSpell: 0
+  door: {fileID: 0}
 --- !u!1 &754813781
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,6 +452,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Relic 1 slots
       objectReference: {fileID: 0}
+    - target: {fileID: 6663368508602399166, guid: 8bd0503bfd2cfe94b884bab4183673e6, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bd0503bfd2cfe94b884bab4183673e6, type: 3}
 --- !u!1001 &1604480813
@@ -574,6 +579,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 677118679951403600, guid: ad833fd90588eb1479bdebd3ce1e623e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 677118679951403603, guid: ad833fd90588eb1479bdebd3ce1e623e, type: 3}
       propertyPath: m_Name
       value: Ihl Variant
@@ -707,3 +716,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whatSpell: 1
+  door: {fileID: 0}
