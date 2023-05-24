@@ -5,6 +5,7 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     public SpellName whatSpell;
+    [SerializeField] GameObject door;
 
     private void OnEnable()
     {
@@ -19,7 +20,7 @@ public class Obstacle : MonoBehaviour
     {
         if(spellName == whatSpell)
         {
-
+            door.SetActive(true);
         Destroy(gameObject);
         }
     }

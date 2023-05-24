@@ -11,6 +11,10 @@ public class RuneRelicButton : MonoBehaviour
     public bool taros = false;
     public bool yohn = false;
     public bool ahk = false;
+    public bool ter = false;
+    public bool marat = false;
+    public bool nek = false;
+    public bool seth = false;
 
     [SerializeField] private GameObject ObjectRelic1;
     [SerializeField] private GameObject ObjectRelic2;
@@ -19,6 +23,10 @@ public class RuneRelicButton : MonoBehaviour
     [SerializeField] private GameObject ObjectTaros;
     [SerializeField] private GameObject ObjectYohn;
     [SerializeField] private GameObject ObjectAhk;
+    [SerializeField] private GameObject ObjectTer;
+    [SerializeField] private GameObject ObjectMarat;
+    [SerializeField] private GameObject ObjectNek;
+    [SerializeField] private GameObject ObjectSeth;
 
     public void collectRelic1()
     {
@@ -48,6 +56,23 @@ public class RuneRelicButton : MonoBehaviour
     public void collectAhk()
     {
         ahk = true;
+    }
+    public void collectTer()
+    {
+        ter = true;
+    }
+    public void collectMarat()
+    {
+        marat = true;
+    }
+    public void collectNek()
+    {
+        nek = true;
+    }
+
+    public void collectSeth()
+    {
+        seth = true;
     }
 
     public void Relic1Button()
@@ -94,6 +119,35 @@ public class RuneRelicButton : MonoBehaviour
         if (ahk)
         {
             Instantiate(ObjectAhk, new Vector3(-2.5f, -1, 0), Quaternion.identity);
+        }
+    }
+    public void TerButton()
+    {
+        if (ter)
+        {
+            Instantiate(ObjectTer, new Vector3(-2.5f, -1, 0), Quaternion.identity);
+        }
+    }
+
+    public void MaratButton()
+    {
+        if (marat)
+        {
+            Instantiate(ObjectMarat, new Vector3(-2.5f, -1, 0), Quaternion.identity);
+        }
+    }
+    public void NekButton()
+    {
+        if (nek)
+        {
+            Instantiate(ObjectSeth, new Vector3(-2.5f, -1, 0), Quaternion.identity);
+        }
+    }
+    public void SethButton()
+    {
+        if (seth)
+        {
+            Instantiate(ObjectSeth, new Vector3(-2.5f, -1, 0), Quaternion.identity);
         }
     }
 }
