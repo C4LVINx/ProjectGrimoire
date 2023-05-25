@@ -26,4 +26,17 @@ public class DraggableObject : MonoBehaviour
     {
         isHeld = false;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        /*
+        Debug.Log("Wow i am colliding");
+        if (collision.gameObject.CompareTag("Trash"))
+        {
+            Destroy(gameObject);
+        }
+        */
+    }
+
+   
 }

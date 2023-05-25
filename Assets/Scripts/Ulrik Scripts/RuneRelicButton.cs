@@ -15,6 +15,7 @@ public class RuneRelicButton : MonoBehaviour
     public bool marat = false;
     public bool nek = false;
     public bool seth = false;
+    public bool hek = false;
 
     [SerializeField] private GameObject ObjectRelic1;
     [SerializeField] private GameObject ObjectRelic2;
@@ -27,6 +28,7 @@ public class RuneRelicButton : MonoBehaviour
     [SerializeField] private GameObject ObjectMarat;
     [SerializeField] private GameObject ObjectNek;
     [SerializeField] private GameObject ObjectSeth;
+    [SerializeField] private GameObject ObjectHek;
 
     public void collectRelic1()
     {
@@ -74,19 +76,23 @@ public class RuneRelicButton : MonoBehaviour
     {
         seth = true;
     }
+    public void collectHek()
+    {
+        hek = true;
+    }
 
     public void Relic1Button()
     {
         if(relic1)
         {
-            Instantiate(ObjectRelic1, new Vector3(-2.5f, -1, 0), Quaternion.identity);
+            ObjectRelic1.transform.position = new Vector3(-2.5f, -1, 0);
         }
     }
     public void Relic2Button()
     {
         if (relic2)
         {
-            Instantiate(ObjectRelic2, new Vector3(-2.5f, -1, 0), Quaternion.identity);
+            ObjectRelic2.transform.position = new Vector3(-2.5f, -1, 0);
         }
     }
 
@@ -94,7 +100,8 @@ public class RuneRelicButton : MonoBehaviour
     {
        if(ihl)
         {
-            Instantiate(ObjectIhl, new Vector3(-2.5f, -1, 0), Quaternion.identity);
+            ObjectIhl.transform.position = new Vector3(-2.5f, -1, 0);
+            //Instantiate(ObjectIhl, new Vector3(-2.5f, -1, 0), Quaternion.identity);
         }
     }
 
@@ -102,7 +109,7 @@ public class RuneRelicButton : MonoBehaviour
     {
         if (taros)
         {
-            Instantiate(ObjectTaros, new Vector3(-2.5f, -1, 0), Quaternion.identity);
+            ObjectTaros.transform.position = new Vector3(-2.5f, -1, 0);
         }
     }
 
@@ -110,7 +117,7 @@ public class RuneRelicButton : MonoBehaviour
     {
         if (yohn)
         {
-            Instantiate(ObjectYohn, new Vector3(-2.5f, -1, 0), Quaternion.identity);
+            ObjectYohn.transform.position = new Vector3(-2.5f, -1, 0);
         }
     }
 
@@ -118,14 +125,14 @@ public class RuneRelicButton : MonoBehaviour
     {
         if (ahk)
         {
-            Instantiate(ObjectAhk, new Vector3(-2.5f, -1, 0), Quaternion.identity);
+            ObjectAhk.transform.position = new Vector3(-2.5f, -1, 0);
         }
     }
     public void TerButton()
     {
         if (ter)
         {
-            Instantiate(ObjectTer, new Vector3(-2.5f, -1, 0), Quaternion.identity);
+            ObjectTer.transform.position = new Vector3(-2.5f, -1, 0);
         }
     }
 
@@ -133,21 +140,28 @@ public class RuneRelicButton : MonoBehaviour
     {
         if (marat)
         {
-            Instantiate(ObjectMarat, new Vector3(-2.5f, -1, 0), Quaternion.identity);
+            ObjectMarat.transform.position = new Vector3(-2.5f, -1, 0);
         }
     }
     public void NekButton()
     {
         if (nek)
         {
-            Instantiate(ObjectSeth, new Vector3(-2.5f, -1, 0), Quaternion.identity);
+            ObjectNek.transform.position = new Vector3(-2.5f, -1, 0);
         }
     }
     public void SethButton()
     {
         if (seth)
         {
-            Instantiate(ObjectSeth, new Vector3(-2.5f, -1, 0), Quaternion.identity);
+            ObjectSeth.transform.position = new Vector3(-2.5f, -1, 0);
+        }
+    }
+    public void HekButton()
+    {
+        if (hek)
+        {
+            ObjectHek.transform.position = new Vector3(-2.5f, -1, 0);
         }
     }
 }

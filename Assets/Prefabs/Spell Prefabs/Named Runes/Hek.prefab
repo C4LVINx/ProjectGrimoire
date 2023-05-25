@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4907407252985990496}
   - component: {fileID: 6243445293056118745}
   m_Layer: 6
-  m_Name: Ter
+  m_Name: Hek
   m_TagString: Rune
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 93058f5c00e980f4e9c17d0314438a46, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 422d8b35de7760546acb34147789e4ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
-    RuneSprite: {fileID: 21300000, guid: 7d5e07cb9a498df4fb99e3c5b4870be5, type: 3}
+    RuneSprite: {fileID: 0}
     WhatSpell: 2
     WhatRelic: 0
     WhatSlot: 0
