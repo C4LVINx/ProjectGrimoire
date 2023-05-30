@@ -19,6 +19,10 @@ public class MainMenuScript : MonoBehaviour
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
+    }
+    public void RollCredits()
+    {
+        SceneManager.LoadScene(3);
     }
 }
