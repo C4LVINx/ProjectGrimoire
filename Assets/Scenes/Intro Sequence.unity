@@ -562,6 +562,7 @@ GameObject:
   - component: {fileID: 1303645034}
   - component: {fileID: 1303645033}
   - component: {fileID: 1303645032}
+  - component: {fileID: 1303645037}
   m_Layer: 5
   m_Name: Intro Text 0
   m_TagString: Untagged
@@ -616,7 +617,7 @@ Animator:
   m_GameObject: {fileID: 1303645030}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dd5245d8d9eecf64185058c9c545cae7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 46bacfe08b5866b4bb2021d24ae13dfb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -660,7 +661,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "It is Heavily Reccomended to use a \nNotebook to record your research
-    while playing this game"
+    while playing this game\n\nPress Space to Continue"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -737,6 +738,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303645030}
   m_CullTransparentMesh: 1
+--- !u!114 &1303645037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303645030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b95975a3434104192556be7faa757b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextText: {fileID: 1595387840}
 --- !u!1 &1595387840
 GameObject:
   m_ObjectHideFlags: 0
