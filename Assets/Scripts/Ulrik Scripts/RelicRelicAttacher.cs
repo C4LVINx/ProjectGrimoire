@@ -53,6 +53,13 @@ public class RelicRelicAttacher : MonoBehaviour
                 detectedRelic = null;
             }
         }
+
+        if(currentRelic == gameObject)
+        {
+            currentRelic = null;
+        }
+
+        
     }
 
     private void FixWhackBug()

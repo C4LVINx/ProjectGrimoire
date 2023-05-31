@@ -16,6 +16,8 @@ public class RelicRuneAttacher : MonoBehaviour
 
     [SerializeField] private Transform attachedRunePos;
     [SerializeField] private Transform attachedRelicPos;
+
+    [SerializeField] private Collider2D noRuneCollider;
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -28,6 +30,19 @@ public class RelicRuneAttacher : MonoBehaviour
         AttachedRuneFollows();
         DetectRune();
         ArtDissapersWhenHeld();
+
+        if(noRuneCollider != null)
+        {
+            if (currentRune != null)
+            {
+                noRuneCollider.enabled = false;
+            }
+            if (currentRune == null)
+            {
+                noRuneCollider.enabled = true;
+            }
+        }
+        
     }
     private void DetectRune()
     {

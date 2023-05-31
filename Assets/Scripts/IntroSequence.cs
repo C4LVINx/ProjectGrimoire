@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 public class IntroSequence : MonoBehaviour
 {
@@ -48,6 +49,11 @@ public class IntroSequence : MonoBehaviour
         }
     
         */
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
     private void SetText2Active()
