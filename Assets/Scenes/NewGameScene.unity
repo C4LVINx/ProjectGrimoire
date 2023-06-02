@@ -298,7 +298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4748226672862702815, guid: 42ecd4217ff42214f88d1a4f2752875b, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4748226672862702815, guid: 42ecd4217ff42214f88d1a4f2752875b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3289,7 +3289,7 @@ Transform:
   - {fileID: 703098613}
   - {fileID: 1645338261}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &669976566
 GameObject:
@@ -3335,7 +3335,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.012569308, y: -0.05297336}
@@ -5894,7 +5894,7 @@ Transform:
   - {fileID: 1730462952}
   - {fileID: 324863023}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1110670673
 GameObject:
@@ -9318,8 +9318,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9534,7 +9534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 677118679951403631, guid: ad833fd90588eb1479bdebd3ce1e623e, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 677118679951403631, guid: ad833fd90588eb1479bdebd3ce1e623e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10528,7 +10528,7 @@ Transform:
   - {fileID: 1215931230}
   - {fileID: 297490217}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1849748415
 PrefabInstance:
@@ -10927,7 +10927,7 @@ Transform:
   - {fileID: 562036098}
   - {fileID: 669976567}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1889615881 stripped
 RectTransform:
@@ -15764,7 +15764,7 @@ RectTransform:
   - {fileID: 14950670}
   - {fileID: 988494440}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
