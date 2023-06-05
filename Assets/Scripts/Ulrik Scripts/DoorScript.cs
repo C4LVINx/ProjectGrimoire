@@ -23,7 +23,42 @@ public class DoorScript : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -1);
     }
 
-    private void OnMouseDown()
+    private void Update()
+    {
+        /*
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
+            if(rayHit == gameObject)
+            {
+                if (nextRoom)
+                {
+                    nextRoomGameobjects.SetActive(true);
+                    nextRoomUIObjects.SetActive(true);
+
+                    previousRoomGameobjects.SetActive(false);
+                    previousRoomUIObjects.SetActive(false);
+                }
+                if (!nextRoom)
+                {
+                    previousRoomGameobjects.SetActive(true);
+                    previousRoomUIObjects.SetActive(true);
+
+                    nextRoomGameobjects.SetActive(false);
+                    nextRoomUIObjects.SetActive(false);
+                }
+                if (isPhilozopherStone)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+
+            }
+            Debug.Log(rayHit.transform.name);
+
+        }
+    */
+    }
+   private void OnMouseDown()
     {
         if(nextRoom)
         {
@@ -46,4 +81,5 @@ public class DoorScript : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
+   
 }
