@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MouseCursor : MonoBehaviour
 {
+    public static MouseCursor Instance { get; private set; }
 
     private int currentFrame;
     private float frameTimer;
@@ -19,9 +20,14 @@ public class MouseCursor : MonoBehaviour
         Grab,
         Point
     }
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     void Start()
     {
-        SetActiveCursorAnimation(cursorAnimationList[0]);
+        SetActiveCursorType(CursorType.Idle);
     }
 
     // Update is called once per frame
@@ -35,10 +41,25 @@ public class MouseCursor : MonoBehaviour
             Cursor.SetCursor(cursorAnimation.textureArray[currentFrame], cursorAnimation.offset, CursorMode.Auto);
         }
 
-        if (Input.GetKeyDown(KeyCode.T)) SetActiveCursorAnimation(cursorAnimationList[0]);
-        if (Input.GetKeyDown(KeyCode.Y)) SetActiveCursorAnimation(cursorAnimationList[1]);
+       
     }
 
+    public void SetActiveCursorType(CursorType cursorType)
+    {
+        SetActiveCursorAnimation(GetCursorAnimation(cursorType));
+    }
+
+    private CursorAnimation GetCursorAnimation(CursorType cursorType)
+    {
+        foreach (CursorAnimation cursorAnimation in cursorAnimationList)
+        {
+            if (cursorAnimation.cursorType == cursorType)
+            {
+                return cursorAnimation;
+            }
+        }
+        return null;
+    }
     private void SetActiveCursorAnimation(CursorAnimation cursorAnimation)
     {
         this.cursorAnimation = cursorAnimation;

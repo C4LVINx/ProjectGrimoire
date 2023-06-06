@@ -945,6 +945,7 @@ GameObject:
   - component: {fileID: 539730640}
   - component: {fileID: 539730639}
   - component: {fileID: 539730641}
+  - component: {fileID: 539730642}
   m_Layer: 0
   m_Name: CursorManager
   m_TagString: Player
@@ -968,12 +969,18 @@ MonoBehaviour:
   - cursorType: 1
     textureArray:
     - {fileID: 2800000, guid: 774956918897047489d934040d74cd83, type: 3}
-    frameRate: 0.1
+    frameRate: 0
     offset: {x: 0, y: 0}
   - cursorType: 2
     textureArray:
     - {fileID: 2800000, guid: 402db43c83d66964d9c9b51527ad6d08, type: 3}
-    frameRate: 0.1
+    - {fileID: 2800000, guid: 1d5349f73ec3c6f458cc6150a19676a2, type: 3}
+    frameRate: 0.5
+    offset: {x: 0, y: 0}
+  - cursorType: 0
+    textureArray:
+    - {fileID: 2800000, guid: 12b68c355beb3f74aaa13e9d0b4574e1, type: 3}
+    frameRate: 0
     offset: {x: 0, y: 0}
 --- !u!4 &539730640
 Transform:
@@ -1016,6 +1023,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &539730642
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539730638}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &624037949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,12 +1558,14 @@ GameObject:
   - component: {fileID: 989210458}
   - component: {fileID: 989210457}
   - component: {fileID: 989210462}
+  - component: {fileID: 989210463}
+  - component: {fileID: 989210464}
   m_Layer: 5
   m_Name: GrassPatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &989210456
 RectTransform:
@@ -1687,7 +1717,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.8880615, y: -1.2061615}
@@ -1703,6 +1733,40 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 42.70166, y: 40.254013}
   m_EdgeRadius: 0
+--- !u!114 &989210463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989210455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48778c9f485ec8745af2416d5fe0e524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorType: 1
+--- !u!50 &989210464
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989210455}
+  m_BodyType: 0
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1045962518
 GameObject:
   m_ObjectHideFlags: 0
@@ -1716,6 +1780,7 @@ GameObject:
   - component: {fileID: 1045962522}
   - component: {fileID: 1045962521}
   - component: {fileID: 1045962520}
+  - component: {fileID: 1045962524}
   m_Layer: 5
   m_Name: RuneTest
   m_TagString: Untagged
@@ -1863,6 +1928,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045962518}
   m_CullTransparentMesh: 1
+--- !u!114 &1045962524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045962518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48778c9f485ec8745af2416d5fe0e524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorType: 1
 --- !u!1 &1083806616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,6 +1953,9 @@ GameObject:
   - component: {fileID: 1083806620}
   - component: {fileID: 1083806619}
   - component: {fileID: 1083806618}
+  - component: {fileID: 1083806621}
+  - component: {fileID: 1083806622}
+  - component: {fileID: 1083806623}
   m_Layer: 5
   m_Name: Note 1
   m_TagString: Untagged
@@ -1998,6 +2079,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083806616}
   m_CullTransparentMesh: 1
+--- !u!114 &1083806621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083806616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48778c9f485ec8745af2416d5fe0e524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorType: 2
+--- !u!61 &1083806622
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083806616}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &1083806623
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083806616}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 7
 --- !u!1 &1120319309
 GameObject:
   m_ObjectHideFlags: 0
