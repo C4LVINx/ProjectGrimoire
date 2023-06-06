@@ -1,31 +1,39 @@
+using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MouseCursor : MonoBehaviour
 {
+    public static MouseCursor Instance { get; private set; }
+
+    [SerializeField] private List<CursorAnimation> cursorAnimationList;
+
+    private CursorAnimation cursorAnimation;
 
     private int currentFrame;
     private float frameTimer;
     private int frameCount;
 
 
-    [SerializeField] private List<CursorAnimation> cursorAnimationList;
-
-    private CursorAnimation cursorAnimation;
     public enum CursorType
     {
-        Idle, 
+        Idle,
         Grab,
         Point
     }
-    void Start()
+
+    private void Awake()
     {
-        SetActiveCursorAnimation(cursorAnimationList[0]);
+        Instance = this;
+    }
+    private void Start()
+    {
+        SetActiveCursorType(CursorType.Idle);
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         frameTimer -= Time.deltaTime;
         if (frameTimer <= 0f)
@@ -35,10 +43,25 @@ public class MouseCursor : MonoBehaviour
             Cursor.SetCursor(cursorAnimation.textureArray[currentFrame], cursorAnimation.offset, CursorMode.Auto);
         }
 
-        if (Input.GetKeyDown(KeyCode.T)) SetActiveCursorAnimation(cursorAnimationList[0]);
-        if (Input.GetKeyDown(KeyCode.Y)) SetActiveCursorAnimation(cursorAnimationList[1]);
+
     }
 
+    public void SetActiveCursorType(CursorType cursorType)
+    {
+        SetActiveCursorAnimation(GetCursorAnimation(cursorType));
+    }
+
+    private CursorAnimation GetCursorAnimation(CursorType cursorType)
+    {
+        foreach (CursorAnimation cursorAnimation in cursorAnimationList)
+        {
+            if (cursorAnimation.cursorType == cursorType)
+            {
+                return cursorAnimation;
+            }
+        }
+        return null;
+    }
     private void SetActiveCursorAnimation(CursorAnimation cursorAnimation)
     {
         this.cursorAnimation = cursorAnimation;
