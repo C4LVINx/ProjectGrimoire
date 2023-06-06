@@ -17,7 +17,6 @@ public class TutorialRuneBox : MonoBehaviour
         if(!hasPickedUpRune)
         {
             runeTutorialTextButton.SetActive(true);
-            runeTutorialTextButton.transform.position = rune1.transform.position;
             hasPickedUpRune = true;
         }
         
@@ -28,7 +27,6 @@ public class TutorialRuneBox : MonoBehaviour
         if (!hasPickedUpRune)
         {
             runeTutorialTextButton.SetActive(true);
-            runeTutorialTextButton.transform.position = rune2.transform.position;
             hasPickedUpRune = true;
         }
     }
@@ -37,7 +35,6 @@ public class TutorialRuneBox : MonoBehaviour
         if (!hasPickedUpRune)
         {
             runeTutorialTextButton.SetActive(true);
-            runeTutorialTextButton.transform.position = rune3.transform.position;
             hasPickedUpRune = true;
         }
     }
@@ -46,7 +43,6 @@ public class TutorialRuneBox : MonoBehaviour
         if (!hasPickedUpRune)
         {
             runeTutorialTextButton.SetActive(true);
-            runeTutorialTextButton.transform.position = rune4.transform.position;
             hasPickedUpRune = true;
         }
     }

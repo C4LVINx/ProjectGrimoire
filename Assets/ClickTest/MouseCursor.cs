@@ -20,7 +20,8 @@ public class MouseCursor : MonoBehaviour
     {
         Idle,
         Grab,
-        Point
+        Point,
+        Read
     }
 
     private void Awake()
