@@ -78,4 +78,10 @@ public class MouseCursor : MonoBehaviour
         public float frameRate;
         public Vector2 offset;
     }
+
+    public void BackToIdle()
+    {
+        SetActiveCursorType(CursorType.Idle);
+    }
+
 }
