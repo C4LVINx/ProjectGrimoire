@@ -10374,7 +10374,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1020667614}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Noteopening, Assembly-CSharp
         m_MethodName: DeactivatingNote
         m_Mode: 1
@@ -10386,7 +10386,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1020667614}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Noteopening, Assembly-CSharp
         m_MethodName: DeactivatingNote
         m_Mode: 1
@@ -13693,15 +13693,13 @@ GameObject:
   - component: {fileID: 1020667613}
   - component: {fileID: 1020667612}
   - component: {fileID: 1020667611}
-  - component: {fileID: 1020667614}
-  - component: {fileID: 1020667615}
   m_Layer: 0
   m_Name: InteractCursorIce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1020667610
 Transform:
   m_ObjectHideFlags: 0
@@ -13808,63 +13806,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1020667614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020667609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 002012ba34f87544ebe75525a70ef7f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  note: {fileID: 1020667609}
---- !u!114 &1020667615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020667609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1024871107
 GameObject:
   m_ObjectHideFlags: 0
@@ -17174,7 +17115,7 @@ PrefabInstance:
     - target: {fileID: 3737075749897444460, guid: 7c5d4b3503b67604988dd02a064ef640, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 1020667614}
+      objectReference: {fileID: 0}
     - target: {fileID: 3737075749897444460, guid: 7c5d4b3503b67604988dd02a064ef640, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
@@ -17555,7 +17496,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: b1b109c2d7cfe5d4b9dd60499a255169, type: 3}
     - target: {fileID: 7531700624554790733, guid: ffa935dfc8903b848b8626c810edc72b, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffa935dfc8903b848b8626c810edc72b, type: 3}
@@ -25722,7 +25663,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: c074124a9eb431643b4c2611c74b87cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -27192,7 +27133,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1020667614}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Noteopening, Assembly-CSharp
         m_MethodName: ActivatingNote
         m_Mode: 1
@@ -27483,7 +27424,7 @@ PrefabInstance:
     - target: {fileID: 8269710096960278161, guid: d81eb06e022ebaf43b1b5dfa31a7d923, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 1020667614}
+      objectReference: {fileID: 0}
     - target: {fileID: 8269710096960278161, guid: d81eb06e022ebaf43b1b5dfa31a7d923, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
